@@ -1,0 +1,5 @@
+{
+  "name": "hmd-tmpl-vocabgen",
+  "description": "Base set of templates for Language Pack code generation",
+  "build": {}
+}
