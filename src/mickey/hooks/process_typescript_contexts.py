@@ -49,12 +49,14 @@ def process_contexts(cfg: MickeyRunConfiguration):
                     "nouns": [
                         entity
                         for entity in ctx.get("data", {}).get("nouns", [])
-                        if extract_top_level_namespace(entity.get("namespace")) == ns
+                        if entity
+                        and extract_top_level_namespace(entity.get("namespace")) == ns
                     ],
                     "relationships": [
                         entity
                         for entity in ctx.get("data", {}).get("relationships", [])
-                        if extract_top_level_namespace(entity.get("namespace")) == ns
+                        if entity
+                        and extract_top_level_namespace(entity.get("namespace")) == ns
                     ],
                 }
                 for ns in namespaces
