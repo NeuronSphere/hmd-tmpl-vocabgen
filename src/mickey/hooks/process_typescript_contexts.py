@@ -11,12 +11,12 @@ def extract_dependencies(rels: List):
     deps = []
 
     for rel in rels:
-        from_ns = extract_top_level_namespace(rel["ref_from"])
+        from_ns = extract_top_level_namespace(rel.get("ref_from"))
 
         if from_ns != rel["namespace"] and from_ns not in deps:
             deps.append(from_ns)
 
-        to_ns = extract_top_level_namespace(rel["ref_to"])
+        to_ns = extract_top_level_namespace(rel.get("ref_to"))
 
         if to_ns != rel["namespace"] and to_ns not in deps:
             deps.append(to_ns)
