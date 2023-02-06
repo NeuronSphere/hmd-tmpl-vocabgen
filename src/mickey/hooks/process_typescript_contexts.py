@@ -31,9 +31,13 @@ def process_contexts(cfg: MickeyRunConfiguration):
     for k, ctx in contexts.items():
         namespaces = []
 
-        for item in ctx.get("data", {}).get("nouns", []) + ctx.get("data", {}).get(
+        schemas = ctx.get("data", {}).get("nouns", []) + ctx.get("data", {}).get(
             "relationships", []
-        ):
+        )
+
+        schemas = list(filter(lambda c: len(c) >= 1, schemas))
+
+        for item in schemas:
             ns = extract_top_level_namespace(item.get("namespace"))
 
             if ns is not None and ns not in namespaces:
