@@ -10,7 +10,7 @@ def extract_top_level_namespace(namespace: str) -> str:
 def extract_dependencies(rels: List):
     deps = []
 
-    rels = list(filter(lambda r: rel, rels))
+    rels = list(filter(lambda r: r, rels))
 
     for rel in rels:
         from_ns = extract_top_level_namespace(rel.get("ref_from"))
