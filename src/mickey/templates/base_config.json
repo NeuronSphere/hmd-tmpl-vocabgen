@@ -12,6 +12,9 @@
     "config": "./src/mickey/templates/class_puml_config.json"
   },
   {
+    "config": "./src/mickey/templates/docs_config.json"
+  },
+  {
     "config": "./src/mickey/templates/postgres_view_all_config.json"
   },
   {
