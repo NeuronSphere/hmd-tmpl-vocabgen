@@ -13,5 +13,5 @@ Attributes
 ++++++++++
 
 {% for attr, value in attributes.items() %}
-* **{{ attr }} ({{type}})**{% if value.required %}(required){% endif %}: {{ description }}
+* **{{ attr }} ({{value.type}})** {% if value.required %}(required){% endif %}: {{ value.description }}
 {% endfor %}
