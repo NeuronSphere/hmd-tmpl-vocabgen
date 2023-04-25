@@ -1,0 +1,14 @@
+[
+  {
+    "config": "./src/mickey/templates/python_lib_config.json"
+  },
+  {
+    "config": "./src/mickey/templates/python_client_config.json"
+  },
+  {
+    "config": "./src/mickey/templates/docs_config.json"
+  },
+  {
+    "config": "./src/mickey/templates/opa_bundles_config.json"
+  }
+]
