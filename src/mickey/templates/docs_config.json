@@ -5,7 +5,11 @@
   "template_packages": ["./src/mickey/templates"],
   "context_definitions": {
     "schemas": {
-      "each": ["src/schemas/**/*.hms"]
+      "each": ["src/schemas/**/*.hms"],
+      "filter": {
+        "property": "metatype",
+        "operator": "not_null"
+      }
     },
     "nouns": {
       "extend": "ref:schemas",
@@ -27,8 +31,8 @@
       "struct": {
         "data": {
           "struct": {
-            "nouns": { "extend": "ref:nouns" },
-            "relationships": { "extend": "ref:relationships" }
+            "nouns": {"extend": "ref:nouns"},
+            "relationships": {"extend": "ref:relationships"}
           },
           "first": true
         }
@@ -48,8 +52,8 @@
           "struct": {
             "entities": {
               "struct": {
-                "nouns": { "extend": "ref:nouns" },
-                "relationships": { "extend": "ref:relationships" }
+                "nouns": {"extend": "ref:nouns"},
+                "relationships": {"extend": "ref:relationships"}
               },
               "first": true
             }
